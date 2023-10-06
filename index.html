@@ -14,7 +14,12 @@
     <script type="text/jsx">
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
-        root.render(<h1>Halo</h1>)
+        root.render(
+            <>
+            <h1 className='heading'>Hello World</h1>
+            <p onClick={e => alert('hello World')} >Belajar React dan Javascript mudah bukan!.</p>
+            </>
+        );
     </script>
 </body>
 </html>
