@@ -14,16 +14,16 @@
     <script type="text/jsx">
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
-        function Header(props) {
-            return (<h1>Hello {props.author}.</h1>)
+        function Header({author}) {
+            return (<h1>Hello {author ? author: 'Person'}.</h1>)
         }
-        function Description(props) {
-            return (<p>Halo, belajar react sangat mudah, bukan? tentunya bersama {props.author}</p>)
+        function Description({author}) {
+            return (<p>Halo, belajar react sangat mudah, bukan? tentunya bersama {author ? author : 'Person'}</p>)
         }
         function HomePage(){
             return (
                 <>
-                <Header author='Nev113'/>
+                <Header />
                 <Description author='Nev113'/>
                 </>
             )
