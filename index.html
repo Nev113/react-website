@@ -21,10 +21,15 @@
             return (<p>Halo, belajar react sangat mudah, bukan? tentunya bersama {author ? author : 'Person'}</p>)
         }
         function HomePage(){
-            const persons = ['Nev113', 'Agus', 'Zeva']
+            const persons = ['Nev113', 'Agus', 'Zeva'];
+            const [likes, setLikes] = React.useState(0);
+            function handleClick() {
+                setLikes(likes + 1);
+            }
             return (
                 <>
                 <Header />
+                <button onClick={() => setLikes(likes + 1)}>Likes ({likes})</button>
                 <ul>
                     {persons.map((person, index) => (
                         <li key={index}>{person}</li>
