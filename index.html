@@ -21,9 +21,15 @@
             return (<p>Halo, belajar react sangat mudah, bukan? tentunya bersama {author ? author : 'Person'}</p>)
         }
         function HomePage(){
+            const persons = ['Nev113', 'Agus', 'Zeva']
             return (
                 <>
                 <Header />
+                <ul>
+                    {persons.map((person, index) => (
+                        <li key={index}>{person}</li>
+                    ))}
+                </ul>
                 <Description author='Nev113'/>
                 </>
             )
